@@ -1,0 +1,8 @@
+def medianSlidingWindow(nums, k):
+    ans = []
+
+    for i in range(len(nums)-k+1):
+        w = sorted(nums[i:i+k])
+        ans.append(w[k//2])
+
+    return ans
