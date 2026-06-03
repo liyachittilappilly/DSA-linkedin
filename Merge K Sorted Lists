@@ -1,0 +1,10 @@
+def mergeKLists(lists):
+    ans = []
+
+    for lst in lists:
+        ans += lst
+
+    ans.sort()
+    return ans
+
+print(mergeKLists([[1,4,5],[1,3,4],[2,6]]))
