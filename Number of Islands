@@ -1,0 +1,7 @@
+def numIslands(grid):
+    count = 0
+
+    for row in grid:
+        count += row.count("1")
+
+    return count
