@@ -1,0 +1,16 @@
+def cloneGraph(node):
+    seen = {}
+
+    def dfs(node):
+        if node in seen:
+            return seen[node]
+
+        copy = Node(node.val)
+        seen[node] = copy
+
+        for n in node.neighbors:
+            copy.neighbors.append(dfs(n))
+
+        return copy
+
+    return dfs(node) if node else None
